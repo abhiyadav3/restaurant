@@ -4,8 +4,11 @@ const db = require('./db');
 const bodyParser = require('body-parser');
 const personRoutes = require('./routes/personRoutes');
 const menuRoutes = require('./routes/menuRoutes');
+require('dotenv').config();
 
 app.use(bodyParser.json());  
+const PORT = process.env.PORT || 3000;
+
 
 app.get('/', function(req,res){
     res.send('Welcome to our Restaurant')
