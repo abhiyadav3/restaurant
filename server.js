@@ -17,6 +17,6 @@ app.get('/', function(req,res){
 app.use('/person', personRoutes);
 app.use('/menu', menuRoutes);
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log("Server is live listening of port 3000")
 });
